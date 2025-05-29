@@ -1,106 +1,218 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // 响应式菜单
-    const hamburger = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾龙娱乐 - 极致娱乐体验，安全可靠的首选平台</title>
+    <meta name="description" content="腾龙娱乐官方网站，提供海量精彩娱乐产品，包括真人娱乐、体育投注、电子游戏、棋牌、彩票等，打造安全、公平、刺激的顶级在线娱乐体验。立即加入，尊享丰厚优惠！">
+    <meta name="keywords" content="腾龙娱乐, 在线娱乐, 真人娱乐, 体育投注, 电子游戏, 棋牌, 彩票, 优惠活动, 负责任博彩, 安全娱乐, 网上赌场, 娱乐平台">
+    
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="腾龙娱乐 - 极致娱乐体验，安全可靠的首选平台">
+    <meta property="og:description" content="腾龙娱乐官方网站，提供海量精彩娱乐产品，包括真人娱乐、体育投注、电子游戏、棋牌、彩票等，打造安全、公平、刺激的顶级在线娱乐体验。立即加入，尊享丰厚优惠！">
+    <meta property="og:image" content="https://yourusername.github.io/tenglong-entertainment/images/hero-banner.jpg"> <!-- 替换为你的实际图片URL -->
+    <meta property="og:url" content="https://yourusername.github.io/tenglong-entertainment/"> <!-- 替换为你的实际网站URL -->
+    <meta property="og:type" content="website">
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active'); // 可选：汉堡包图标动画
-    });
-
-    // 轮播图功能
-    const carouselSlides = document.querySelectorAll('.carousel-slide');
-    const prevButton = document.querySelector('.prev-slide');
-    const nextButton = document.querySelector('.next-slide');
-    let currentSlide = 0;
-    let slideInterval;
-
-    function showSlide(index) {
-        carouselSlides.forEach((slide, i) => {
-            slide.classList.remove('active');
-            if (i === index) {
-                slide.classList.add('active');
-            }
-        });
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % carouselSlides.length;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + carouselSlides.length) % carouselSlides.length;
-        showSlide(currentSlide);
-    }
-
-    function startSlideShow() {
-        slideInterval = setInterval(nextSlide, 5000); // 每5秒切换一次
-    }
-
-    function stopSlideShow() {
-        clearInterval(slideInterval);
-    }
-
-    if (carouselSlides.length > 0) {
-        showSlide(currentSlide);
-        startSlideShow();
-
-        prevButton.addEventListener('click', () => {
-            stopSlideShow();
-            prevSlide();
-            startSlideShow(); // 重新开始计时
-        });
-
-        nextButton.addEventListener('click', () => {
-            stopSlideShow();
-            nextSlide();
-            startSlideShow(); // 重新开始计时
-        });
-
-        // 鼠标移入停止轮播，移出继续
-        const heroSection = document.querySelector('.hero-section');
-        if (heroSection) {
-            heroSection.addEventListener('mouseenter', stopSlideShow);
-            heroSection.addEventListener('mouseleave', startSlideShow);
-        }
-    }
-
-
-    // 常见问题手风琴效果 (假设 help.html 中有此类结构)
-    const faqItems = document.querySelectorAll('.faq-item h3'); // 假设每个问题是 h3
-
-    faqItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const answer = item.nextElementSibling; // 答案紧随问题之后
-            if (answer && answer.classList.contains('faq-answer')) {
-                answer.classList.toggle('active');
-                // 可选：添加或移除箭头图标方向
-                item.classList.toggle('active');
-            }
-        });
-    });
-
-    // 假设 help.html 的 FAQ 结构大致如下：
-    /*
-    <div class="faq-item">
-        <h3>问题1标题</h3>
-        <div class="faq-answer">
-            <p>问题1的答案内容。</p>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 如果有单独的响应式CSS文件 -->
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="腾龙娱乐Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="hamburger-menu" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="games.html">娱乐产品</a></li>
+                    <li><a href="promotions.html">优惠活动</a></li>
+                    <li><a href="news.html">新闻中心</a></li>
+                    <li><a href="vip.html">VIP尊享</a></li>
+                    <li><a href="help.html">帮助中心</a></li>
+                    <li><a href="contact.html">联系我们</a></li>
+                    <li class="btn-group">
+                        <a href="#" class="btn btn-login">登录</a>
+                        <a href="#" class="btn btn-register">注册</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    */
-    // 需要在 style.css 中添加 .faq-answer 的样式，如：
-    /*
-    .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        padding: 0 15px;
-    }
-    .faq-answer.active {
-        max-height: 200px; // 根据内容调整
-        padding: 15px;
-    }
-    */
-});
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <!-- 轮播图区域 -->
+                <div class="carousel">
+                    <div class="carousel-slide active">
+                        <img src="images/hero-banner.jpg" alt="腾龙娱乐 精彩人生">
+                        <div class="carousel-caption">
+                            <h1>欢迎来到腾龙娱乐</h1>
+                            <p>极致娱乐体验，安全可靠的首选平台</p>
+                            <a href="#" class="btn btn-primary">立即注册</a>
+                        </div>
+                    </div>
+                    <!-- 更多轮播图项 -->
+                    <!-- <div class="carousel-slide">...</div> -->
+                </div>
+                <div class="carousel-nav">
+                    <button class="prev-slide"><</button>
+                    <button class="next-slide">></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-games section-padding">
+            <div class="container">
+                <h2>精选娱乐产品</h2>
+                <p class="section-description">我们为您精心挑选，提供最热门、最刺激的娱乐体验。</p>
+                <div class="game-grid">
+                    <div class="game-card">
+                        <img src="images/game-thumbnail-1.jpg" alt="真人娱乐">
+                        <h3>真人娱乐</h3>
+                        <p>身临其境的赌场体验，与荷官实时互动。</p>
+                        <a href="games.html#live-casino" class="btn btn-secondary">立即体验</a>
+                    </div>
+                    <div class="game-card">
+                        <img src="images/game-thumbnail-2.jpg" alt="体育投注">
+                        <h3>体育投注</h3>
+                        <p>覆盖全球热门赛事，赔率领先，玩法多样。</p>
+                        <a href="games.html#sports" class="btn btn-secondary">立即投注</a>
+                    </div>
+                    <div class="game-card">
+                        <img src="images/game-thumbnail-3.jpg" alt="电子游戏">
+                        <h3>电子游戏</h3>
+                        <p>数千款老虎机与桌面游戏，大奖等你来赢！</p>
+                        <a href="games.html#slots" class="btn btn-secondary">立即畅玩</a>
+                    </div>
+                    <div class="game-card">
+                        <img src="images/game-thumbnail-4.jpg" alt="棋牌游戏">
+                        <h3>棋牌游戏</h3>
+                        <p>经典棋牌玩法，策略与运气的较量。</p>
+                        <a href="games.html#poker" class="btn btn-secondary">立即挑战</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-promotions section-padding bg-light">
+            <div class="container">
+                <h2>最新优惠活动</h2>
+                <p class="section-description">丰厚奖金，独家礼遇，助您畅玩无忧！</p>
+                <div class="promotion-grid">
+                    <div class="promotion-card">
+                        <img src="images/promo-banner-1.jpg" alt="首存送豪礼">
+                        <h3>新用户首存送豪礼</h3>
+                        <p>高达1888元迎新奖金，助力您开启娱乐之旅！</p>
+                        <a href="promotions.html#new-user" class="btn btn-info">查看详情</a>
+                    </div>
+                    <div class="promotion-card">
+                        <img src="images/promo-banner-2.jpg" alt="每日返水">
+                        <h3>每日返水无上限</h3>
+                        <p>玩得多，返得多，每日自动派发。</p>
+                        <a href="promotions.html#cashback" class="btn btn-info">查看详情</a>
+                    </div>
+                    <div class="promotion-card">
+                        <img src="images/promo-banner-3.jpg" alt="VIP专属福利">
+                        <h3>VIP专属升级奖励</h3>
+                        <p>等级越高，福利越丰厚，尊享专属服务。</p>
+                        <a href="promotions.html#vip-promo" class="btn btn-info">查看详情</a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="promotions.html" class="btn btn-primary btn-large">查看所有优惠活动</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us-brief section-padding">
+            <div class="container">
+                <h2>关于腾龙娱乐</h2>
+                <div class="flex-row">
+                    <div class="col-half">
+                        <p>腾龙娱乐致力于为全球玩家提供一个安全、公平、透明、刺激的在线娱乐平台。我们拥有合法牌照，采用国际领先的技术保障您的资金和信息安全。从真人娱乐到体育赛事，从电子游艺到经典棋牌，我们提供多元化的产品，满足不同玩家的需求。</p>
+                        <p>我们秉承“客户至上”的服务理念，提供24/7全天候客户支持，确保您在娱乐过程中获得最优质的服务。选择腾龙娱乐，选择非凡的娱乐体验！</p>
+                        <a href="about.html" class="btn btn-outline">了解更多关于我们</a>
+                    </div>
+                    <div class="col-half text-center">
+                        <img src="images/company-overview.jpg" alt="腾龙娱乐公司概览" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action section-padding bg-dark text-white">
+            <div class="container text-center">
+                <h2>立即加入腾龙娱乐，开启您的财富之旅！</h2>
+                <p>简单注册，丰厚奖励，无限精彩等你来体验！</p>
+                <a href="#" class="btn btn-success btn-large">免费注册账号</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于腾龙</h4>
+                    <ul>
+                        <li><a href="about.html">公司简介</a></li>
+                        <li><a href="responsible-gaming.html">负责任博彩</a></li>
+                        <li><a href="privacy-policy.html">隐私政策</a></li>
+                        <li><a href="terms-of-service.html">服务条款</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>娱乐产品</h4>
+                    <ul>
+                        <li><a href="games.html#live-casino">真人娱乐</a></li>
+                        <li><a href="games.html#sports">体育投注</a></li>
+                        <li><a href="games.html#slots">电子游戏</a></li>
+                        <li><a href="games.html#poker">棋牌游戏</a></li>
+                        <li><a href="games.html#lottery">彩票</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="help.html">常见问题</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                        <li><a href="#">存款帮助</a></li>
+                        <li><a href="#">取款帮助</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><img src="images/icon-facebook.png" alt="Facebook"></a>
+                        <a href="#" aria-label="Twitter"><img src="images/icon-twitter.png" alt="Twitter"></a>
+                        <a href="#" aria-label="WeChat"><img src="images/icon-wechat.png" alt="WeChat"></a>
+                        <!-- 更多社交媒体图标 -->
+                    </div>
+                    <p>联系邮箱：<a href="mailto:support@tenglong.com">support@tenglong.com</a></p>
+                    <p>客服热线：+86-XXX-XXXX-XXXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 腾龙娱乐 版权所有. 保留所有权利。</p>
+                <img src="images/age-restriction.png" alt="18+限制" class="age-restriction">
+                <img src="images/license-logo.png" alt="合法牌照" class="license-logo">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
