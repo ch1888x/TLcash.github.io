@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腾龙娱乐 - 极致娱乐体验，安全公平，赢取无限财富！</title>
+    <meta name="description" content="腾龙娱乐是您信赖的在线娱乐平台，提供丰富多彩的真人荷官、老虎机、体育投注和棋牌游戏，极致的用户体验，安全公平的娱乐环境。立即加入，享受专属福利，开启您的财富之旅！">
+    <link rel="icon" href="https://via.placeholder.com/32x32?text=TL" type="image/png"> <!-- 替换成您的网站图标 -->
+
+    <!-- 引入外部字体（可选，此处为示例，需联网才能加载） -->
+    <!-- 如果需要更专业的中文排版，可以取消注释并替换字体 -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet"> -->
+
+    <!-- 模拟引入图标字体 (实际使用时应引入Font Awesome等库) -->
+    <style>
+        /* 仅为演示图标样式，实际项目中会引入专业的图标库如 Font Awesome */
+        .icon {
+            font-family: 'Times New Roman', serif; /* 随便一个字体，仅做占位符效果 */
+            font-style: normal;
+            font-weight: normal;
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 1.2em;
+            vertical-align: middle;
+        }
+        .icon::before { content: "\2605"; } /* 默认星号 */
+        .icon.star::before { content: "\2605"; } /* ★ */
+        .icon.check::before { content: "\2713"; } /* ✓ */
+        .icon.gamepad::before { content: "\1F3AE"; } /* 🎮 */
+        .icon.gift::before { content: "\1F381"; } /* 🎁 */
+        .icon.lock::before { content: "\1F512"; } /* 🔒 */
+        .icon.support::before { content: "\1F4DE"; } /* 📞 */
+        .icon.dollar::before { content: "\0024"; } /* $ */
+        .icon.wallet::before { content: "\1F4B0"; } /* 💰 */
+        .icon.quote::before { content: "\201C"; font-size: 1.5em; vertical-align: bottom; } /* “ 引号 */
+        .icon.trophy::before { content: "\1F3C6"; } /* 🏆 */
+        .icon.shield::before { content: "\1F6E1"; } /* 🛡️ */
+        .icon.heart::before { content: "\2764"; } /* ❤️ */
+        /* 模拟社交媒体图标，如果需要Font Awesome，这里可以替换为fa-facebook等 */
+        .icon.F::before { content: "F"; } /* 模拟FB图标 */
+        .icon.T::before { content: "T"; } /* 模拟TW图标 */
+        .icon.Tg::before { content: "Tg"; } /* 模拟TG图标 */
+    </style>
+
+    <!-- 内联CSS样式：用于此页面的所有视觉设计 -->
+    <style>
+        :root {
+            --primary-color: #007bff; /* 蓝色 */
+            --secondary-color: #6c757d; /* 灰色 */
+            --accent-color: #ffc107; /* 黄色/金色，用于强调 */
+            --dark-bg: #212529; /* 深色背景 */
+            --light-bg: #f8f9fa; /* 浅色背景 */
+            --text-light: #f8f9fa; /* 浅色文字 */
+            --text-dark: #343a40; /* 深色文字 */
+            --border-color: #dee2e6; /* 边框颜色 */
+            --spacing-unit: 20px;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', Arial, sans-serif; /* 假设有字体，否则用Arial */
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth; /* 平滑滚动 */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: var(--spacing-unit) 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 40px; /* 替换成实际logo大小 */
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: var(--spacing-unit);
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-radius: 4px;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-color);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center; /* Ensure button text is centered */
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-large {
+            padding: 15px 30px;
+            font-size: 1.1em;
+        }
+
+        .btn-sm {
+            padding: 8px 15px;
+            font-size: 0.9em;
+        }
+
+        /* 英雄区/Banner样式 */
+        .hero {
+            background: url('https://via.placeholder.com/1920x600/333/eee?text=腾龙娱乐%20-极致娱乐体验') no-repeat center center/cover; /* 替换成您的背景图 */
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5); /* 半透明遮罩 */
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 通用区块样式 */
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        section:nth-of-type(even) { /* 隔行背景色 */
+            background-color: var(--light-bg);
+        }
+
+        section:nth-of-type(odd) {
+            background-color: white;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* 关于我们/简介 */
+        .about-us p {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .about-features {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-unit);
+            flex-wrap: wrap; /* 允许换行 */
+        }
+        .feature-item {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: var(--spacing-unit);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            text-align: left;
+            transition: transform 0.3s ease;
+        }
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+        .feature-item .icon {
+            font-size: 3em;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+        .feature-item h3 {
+            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        .feature-item p {
+            font-size: 1em;
+            color: #ccc;
+        }
+
+        /* 游戏类别 */
+        .game-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-unit);
+            margin-top: 40px;
+        }
+        .game-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .game-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .game-card-content {
+            padding: var(--spacing-unit);
+        }
+        .game-card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.3em;
+        }
+        .game-card p {
+            font-size: 0.95em;
+            color: var(--text-dark);
+        }
+        .game-card .btn {
+            margin-top: 15px;
+            width: calc(100% - 2*var(--spacing-unit));
+            text-align: center;
+        }
+
+        /* 优惠活动 */
+        .promotions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-unit);
+        }
+        .promo-card {
+            background-color: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: var(--spacing-unit);
+            text-align: left;
+            transition: border-color 0.3s ease;
+        }
+        .promo-card:hover {
+            border-color: var(--primary-color);
+        }
+        .promo-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+        }
+        .promo-card h3 .icon {
+            font-size: 1.5em;
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+        .promo-card p {
+            font-size: 0.95em;
+        }
+
+        /* 为什么选择我们 */
+        .why-choose-us .features-list {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-unit);
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .reason-item {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            padding: var(--spacing-unit);
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: left;
+            border-bottom: 4px solid var(--primary-color);
+        }
+        .reason-item .icon {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .reason-item h3 {
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .reason-item p {
+            font-size: 0.9em;
+            color: var(--secondary-color);
+        }
+
+        /* 玩家评价 */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-unit);
+            margin-top: 40px;
+        }
+        .testimonial-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: var(--spacing-unit);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+        .testimonial-card .quote-icon {
+            font-size: 3em;
+            color: var(--accent-color);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.2;
+        }
+        .testimonial-card p {
+            font-style: italic;
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            padding-top: 20px; /* Make space for quote icon */
+        }
+        .testimonial-card .author {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        .testimonial-card .rating .icon.star {
+            font-size: 1em;
+            color: var(--accent-color);
+        }
+
+        /* 合作伙伴 */
+        .partners-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-unit) * 2;
+            margin-top: 40px;
+        }
+        .partner-logo {
+            flex-shrink: 0; /* Prevent shrinking */
+            width: 120px; /* Fixed width for logos */
+            height: 60px; /* Fixed height for logos */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .partner-logo:hover {
+            transform: scale(1.05);
+        }
+        .partner-logo img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+            filter: grayscale(100%); /* Make logos grayscale */
+            transition: filter 0.3s ease;
+        }
+        .partner-logo img:hover {
+            filter: grayscale(0%); /* Color on hover */
+        }
+
+
+        /* 常见问题 */
+        .faq-list {
+            max-width: 800px;
+            margin: 40px auto 0;
+            text-align: left;
+        }
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .faq-question {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: #0056b3;
+        }
+        .faq-question .arrow {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            background-color: white;
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* 足够高以容纳内容 */
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .faq-item.active .faq-question .arrow {
+            transform: rotate(90deg);
+        }
+
+        /* CTA 区块 */
+        .cta-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 80px 0;
+        }
+        .cta-section h2 {
+            color: white;
+        }
+        .cta-section h2::after {
+            background-color: var(--accent-color);
+        }
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 底部样式 */
+        footer {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: 40px 0;
+            font-size: 0.9em;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: var(--spacing-unit);
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h4 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--text-light);
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            font-size: 1.5em;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: var(--spacing-unit);
+            margin-top: var(--spacing-unit);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* 模态框样式 */
+        .modal {
+            display: none; /* 默认隐藏 */
+            position: fixed; /* 保持在屏幕上 */
+            z-index: 2000; /* 放置在最上层 */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* 允许滚动 */
+            background-color: rgba(0,0,0,0.6); /* 半透明背景 */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: auto;
+            padding: calc(var(--spacing-unit) * 1.5); /* Changed to calc() for consistency */
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+            animation: fadeInScale 0.3s ease-out;
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .close-button {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .modal-content h3 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .modal-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .modal-content input[type="text"],
+        .modal-content input[type="password"],
+        .modal-content input[type="email"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1em;
+            transition: border-color 0.3s ease; /* Add transition for border color */
+        }
+
+        /* CSS for the shake animation */
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-5px); }
+            40% { transform: translateX(5px); }
+            60% { transform: translateX(-5px); }
+            80% { transform: translateX(5px); }
+            100% { transform: translateX(0); }
+        }
+
+        .shake {
+            animation: shake 0.3s ease-in-out;
+        }
+
+        .modal-content .btn {
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            font-size: 1.1em;
+        }
+
+        /* 响应式设计基础 */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logo {
+                margin-bottom: 15px;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 15px;
+            }
+            nav ul li {
+                margin: 5px 10px;
+            }
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            .about-features, .game-categories, .promotions-grid, .why-choose-us .features-list, 
+            .testimonials-grid, .partners-grid, .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature-item, .game-card, .promo-card, .reason-item, .testimonial-card, .partner-logo, .footer-section {
+                width: 90%;
+                max-width: 400px; /* 限制在小屏幕上的最大宽度 */
+            }
+            .cta-buttons {
+                width: 100%;
+                justify-content: center;
+                margin-top: 15px;
+            }
+            .testimonial-card .quote-icon {
+                font-size: 2.5em;
+                top: 5px;
+                left: 10px;
+            }
+            .testimonial-card p {
+                padding-top: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 0;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            section {
+                padding: 40px 0;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            .btn {
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部导航区 -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <img src="https://via.placeholder.com/40x40/007bff/fff?text=TL" alt="腾龙娱乐Logo">
+                腾龙娱乐
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link active">首页</a></li>
+                    <li><a href="#about" class="nav-link">关于我们</a></li>
+                    <li><a href="#games" class="nav-link">游戏中心</a></li>
+                    <li><a href="#promotions" class="nav-link">优惠活动</a></li>
+                    <li><a href="#features" class="nav-link">平台优势</a></li>
+                    <li><a href="#testimonials" class="nav-link">玩家评价</a></li> <!-- 新增导航链接 -->
+                    <li><a href="#partners" class="nav-link">合作伙伴</a></li> <!-- 新增导航链接 -->
+                    <li><a href="#faq" class="nav-link">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons" id="headerCtaButtons">
+                <!-- 这里的按钮将由 JavaScript 动态生成/管理 -->
+                <button class="btn btn-outline" id="loginBtn">登录</button>
+                <button class="btn btn-primary" id="registerBtn">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 英雄区/主视觉区 -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>加入腾龙娱乐，开启您的财富之旅！</h1>
+                <p>体验顶级的在线娱乐平台，享受真人荷官、电子游戏、体育投注和更多精彩。安全、公平、值得信赖！</p>
+                <!-- 注意：这里的链接直接跳转，不触发模态框 -->
+                <a href="https://www.itl1001.com/" target="_blank" class="btn btn-primary btn-large">立即注册，领取新手礼包！</a>
+            </div>
+        </section>
+
+        <!-- 关于我们/简介区 -->
+        <section id="about" class="about-us">
+            <div class="container">
+                <h2>关于腾龙娱乐</h2>
+                <p>腾龙娱乐作为亚洲领先的在线娱乐平台，致力于为全球玩家提供一个安全、公平、透明且充满乐趣的娱乐环境。我们拥有合法的运营执照，采用最先进的加密技术，确保每一位用户的资金和个人信息安全。</p>
+                <p>我们深知用户体验的重要性，因此平台界面简洁直观，操作流畅便捷。无论您是经验丰富的资深玩家，还是初次尝试的新手，腾龙娱乐都将是您的最佳选择。</p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <i class="icon gamepad"></i>
+                        <h3>海量游戏选择</h3>
+                        <p>我们汇聚了全球顶级的游戏产品，包括真人娱乐、老虎机、体育赛事、棋牌游戏等，满足您的一切娱乐需求。</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon lock"></i>
+                        <h3>极致安全保障</h3>
+                        <p>采用SSL加密技术和多重安全防护，保障您的账户和资金安全，让您无忧享受娱乐。</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon support"></i>
+                        <h3>24/7 专业客服</h3>
+                        <p>我们的专业客服团队全年无休，随时待命，为您提供最及时、最专业的帮助和支持。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏中心区 -->
+        <section id="games" class="game-center">
+            <div class="container">
+                <h2>热门游戏类型</h2>
+                <p>探索腾龙娱乐丰富多彩的游戏世界，总有一款适合您！</p>
+                <div class="game-categories">
+                    <div class="game-card">
+                        <img src="https://via.placeholder.com/400x200/007bff/fff?text=真人娱乐" alt="真人娱乐">
+                        <div class="game-card-content">
+                            <h3>真人娱乐</h3>
+                            <p>与真实荷官在线互动，体验百家乐、轮盘、骰宝等经典娱乐，感受身临其境的赌场氛围。</p>
+                            <a href="#" class="btn btn-outline">立即体验</a>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://via.placeholder.com/400x200/28a745/fff?text=电子老虎机" alt="电子老虎机">
+                        <div class="game-card-content">
+                            <h3>电子老虎机</h3>
+                            <p>数百款精美老虎机游戏，主题多样，玩法刺激，巨额奖池等待您的挑战！</p>
+                            <a href="#" class="btn btn-outline">立即体验</a>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://via.placeholder.com/400x200/ffc107/fff?text=体育投注" alt="体育投注">
+                        <div class="game-card-content">
+                            <h3>体育投注</h3>
+                            <p>覆盖全球各大体育赛事，提供实时赔率，让您在支持喜爱的球队时，享受额外激情。</p>
+                            <a href="#" class="btn btn-outline">立即体验</a>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://via.placeholder.com/400x200/dc3545/fff?text=棋牌游戏" alt="棋牌游戏">
+                        <div class="game-card-content">
+                            <h3>棋牌游戏</h3>
+                            <p>经典的斗地主、麻将、炸金花等棋牌玩法，策略与运气并存，与全球玩家一较高下。</p>
+                            <a href="#" class="btn btn-outline">立即体验</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 优惠活动区 -->
+        <section id="promotions" class="promotions">
+            <div class="container">
+                <h2>最新优惠活动</h2>
+                <p>注册腾龙娱乐，尊享独家福利，让您的娱乐体验更加丰富多彩！</p>
+                <div class="promotions-grid">
+                    <div class="promo-card">
+                        <h3><i class="icon gift"></i>新手注册大礼包</h3>
+                        <p>首次注册并充值，即可获得100%首存优惠，最高可达888元！</p>
+                        <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                    </div>
+                    <div class="promo-card">
+                        <h3><i class="icon dollar"></i>每日返水无上限</h3>
+                        <p>无论输赢，每日根据您的有效投注额进行返水，返水比例高，领取无上限！</p>
+                        <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                    </div>
+                    <div class="promo-card">
+                        <h3><i class="icon wallet"></i>推荐好友奖励</h3>
+                        <p>邀请好友加入腾龙娱乐，成功注册并存款，您和好友均可获得丰厚奖励！</p>
+                        <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                    </div>
+                    <div class="promo-card">
+                        <h3><i class="icon star"></i>VIP专属特权</h3>
+                        <p>成为腾龙娱乐VIP会员，尊享专属客户经理、生日礼金、更高返水和更多定制服务！</p>
+                        <a href="#" class="btn btn-primary btn-sm">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 为什么选择我们/平台优势 -->
+        <section id="features" class="why-choose-us">
+            <div class="container">
+                <h2>为什么选择腾龙娱乐？</h2>
+                <p>我们不仅提供丰富的游戏，更致力于打造一个值得您信赖的、负责任的娱乐平台。</p>
+                <div class="features-list">
+                    <div class="reason-item">
+                        <i class="icon check"></i>
+                        <h3>合法合规运营</h3>
+                        <p>持有国际博彩牌照，接受严格监管，确保所有运营行为合法合规。</p>
+                    </div>
+                    <div class="reason-item">
+                        <i class="icon check"></i>
+                        <h3>先进技术保障</h3>
+                        <p>采用行业顶尖的加密技术和安全系统，全方位保护您的数据安全和隐私。</p>
+                    </div>
+                    <div class="reason-item">
+                        <i class="icon check"></i>
+                        <h3>公平公正原则</h3>
+                        <p>所有游戏结果均由国际认证的随机数生成器产生，绝无作弊，保证游戏公平。</p>
+                    </div>
+                    <div class="reason-item">
+                        <i class="icon check"></i>
+                        <h3>便捷存取款</h3>
+                        <p>支持多种安全快捷的存取款方式，处理效率高，让您资金周转无忧。</p>
+                    </div>
+                    <div class="reason-item">
+                        <i class="icon check"></i>
+                        <h3>负责任博彩</h3>
+                        <p>我们提倡负责任博彩，提供自我限制工具，帮助玩家健康娱乐。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 玩家评价区 -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>玩家真实评价</h2>
+                <p>听听玩家们怎么说，他们的满意是我们最大的动力！</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <i class="icon quote quote-icon"></i>
+                        <p>“腾龙娱乐真是我的首选平台！游戏种类多，提款速度快，客服态度也很好，每次遇到问题都能耐心解决。”</p>
+                        <div class="author">—— 王先生</div>
+                        <div class="rating">
+                            <i class="icon star"></i><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="icon quote quote-icon"></i>
+                        <p>“我喜欢这里的真人荷官游戏，感觉就像置身于真实的赌场。而且优惠活动也很给力，让我的娱乐体验更上一层楼！”</p>
+                        <div class="author">—— 李女士</div>
+                        <div class="rating">
+                            <i class="icon star"></i><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="icon quote quote-icon"></i>
+                        <p>“体育投注的赔率很棒，而且可以实时跟进比赛，每次都能找到我喜欢的赛事。安全公平，玩得放心。”</p>
+                        <div class="author">—— 张先生</div>
+                        <div class="rating">
+                            <i class="icon star"></i><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i><i class="icon star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 合作伙伴区 -->
+        <section id="partners" class="partners">
+            <div class="container">
+                <h2>我们的合作伙伴</h2>
+                <p>与全球顶级游戏供应商合作，确保您获得最优质、最公正的游戏体验。</p>
+                <div class="partners-grid">
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/100x50/eee/333?text=AG%20Gaming" alt="AG Gaming Logo">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/100x50/eee/333?text=OG%20Plus" alt="OG Plus Logo">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/100x50/eee/333?text=BBIN" alt="BBIN Logo">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/100x50/eee/333?text=Evolution" alt="Evolution Gaming Logo">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/100x50/eee/333?text=PT%20Gaming" alt="PT Gaming Logo">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="https://via.placeholder.com/100x50/eee/333?text=SA%20Gaming" alt="SA Gaming Logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 立即行动/CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>立即加入腾龙娱乐！</h2>
+                <p>别再犹豫，立即注册成为腾龙娱乐的一员，与全球玩家一起，体验前所未有的娱乐盛宴！</p>
+                <a href="#" class="btn btn-outline btn-large" id="ctaRegisterBtn">立即注册</a>
+            </div>
+        </section>
+
+        <!-- 常见问题区 -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <h2>常见问题解答</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>如何注册腾龙娱乐账户？</span>
+                            <span class="arrow">></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>点击页面顶部的“注册”按钮，填写您的用户名和密码，即可完成注册。过程简单快捷。请注意，系统会使用您的用户名构造一个虚拟邮箱用于账户管理。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>腾龙娱乐是否安全可靠？</span>
+                            <span class="arrow">></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>是的，腾龙娱乐采用行业领先的安全技术和合法的运营牌照，确保您的资金和个人信息安全。我们致力于提供一个公平、透明且值得信赖的娱乐环境。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>如何进行存款和提款？</span>
+                            <span class="arrow">></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>登录您的账户后，进入“存取款”页面，选择您偏好的支付方式（如银行卡、电子钱包等），按照指引完成操作。我们支持多种快速安全的存取款渠道。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>如果遇到问题，如何联系客服？</span>
+                            <span class="arrow">></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>您可以通过网站右下角的在线客服按钮、或查看底部联系方式中的电话/邮箱，我们的专业客服团队24小时在线，全年无休，随时为您提供帮助。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 底部信息区 -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-section company-info">
+                <h4>腾龙娱乐</h4>
+                <p>极致娱乐，尽在腾龙！<br>致力于为您带来最优质的在线娱乐体验。</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="icon F"></i></a> <!-- 模拟FB图标 -->
+                    <a href="#" title="Twitter"><i class="icon T"></i></a> <!-- 模拟TW图标 -->
+                    <a href="#" title="Telegram"><i class="icon Tg"></i></a> <!-- 模拟TG图标 -->
+                </div>
+            </div>
+            <div class="footer-section quick-links">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#games">游戏中心</a></li>
+                    <li><a href="#promotions">优惠活动</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">条款与条件</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-info">
+                <h4>联系我们</h4>
+                <p>邮箱: shixinqiangx@gmail.com <br> 客服热线: 09662348273</p>
+                <p>工作时间: 24小时，全年无休</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 腾龙娱乐. All Rights Reserved. | 请理性博彩，未成年人禁止参与。</p>
+        </div>
+    </footer>
+
+    <!-- 登录/注册模态框 -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeLoginModal">×</span>
+            <h3>账户登录</h3>
+            <form id="loginForm" action="#" method="post">
+                <input type="text" placeholder="用户名" required id="loginUsername">
+                <input type="password" placeholder="密码" required id="loginPassword">
+                <button type="submit" class="btn btn-primary">登录</button>
+                <p style="text-align: center; font-size: 0.9em; margin-top: 10px;">
+                    还没有账户？ <a href="#" id="switchToRegister" style="color: var(--primary-color);">立即注册</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeRegisterModal">×</span>
+            <h3>新用户注册</h3>
+            <form id="registerForm" action="#" method="post">
+                <input type="text" placeholder="用户名" required id="registerUsername">
+                <input type="password" placeholder="设置密码" required id="registerPassword">
+                <input type="password" placeholder="确认密码" required id="registerConfirmPassword">
+                <span id="passwordMismatchError" style="color: red; display: none; font-size: 0.85em; margin-top: -10px;">两次输入的密码不一致！</span>
+                <button type="submit" class="btn btn-primary">注册</button>
+                <p style="text-align: center; font-size: 0.9em; margin-top: 10px;">
+                    已有账户？ <a href="#" id="switchToLogin" style="color: var(--primary-color);">立即登录</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 引入 Supabase 客户端库 -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- 内联JavaScript：用于页面的交互功能 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 获取头部元素用于计算滚动偏移
+            const header = document.querySelector('header');
+
+            // --- Supabase 配置 ---
+            // 已为您填写实际的 URL 和 Anon Key
+            const SUPABASE_URL = 'https://poenchrekvdwnpmjmewb.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBvZW5jaHJla3Zkd3BubWptZXdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1MzM4NDcsImV4cCI6MjA2NDEwOTg0N30.eNZBC2umXt1a7I8wX8H7cVBnxAbDdOLAtBWa8w0ethI';
+
+            // 初始化 Supabase 客户端
+            const supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+            // ---------------------
+
+            // 平滑滚动效果
+            document.querySelectorAll('nav a.nav-link').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    // 检查是否是导航链接到特定部分
+                    const targetId = this.getAttribute('href').substring(1); // 获取 #后面的ID
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+
+                        // 激活当前导航项
+                        document.querySelectorAll('nav a.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            // 监听页面滚动，激活当前可见的导航项
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    // Adjust sectionTop by header height for accurate active link
+                    const sectionTop = section.offsetTop - header.offsetHeight - 100; // Add some offset
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+
+            // FAQ 折叠/展开功能
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', function() {
+                    const parentItem = this.closest('.faq-item');
+                    parentItem.classList.toggle('active');
+                });
+            });
+
+            // 模态框功能
+            const loginModal = document.getElementById('loginModal');
+            const registerModal = document.getElementById('registerModal');
+
+            const headerCtaButtons = document.getElementById('headerCtaButtons'); // 头部按钮容器
+            const ctaRegisterBtn = document.getElementById('ctaRegisterBtn'); // 底部CTA注册按钮
+
+            const closeLoginModal = document.getElementById('closeLoginModal');
+            const closeRegisterModal = document.getElementById('closeRegisterModal');
+
+            const switchToRegister = document.getElementById('switchToRegister');
+            const switchToLogin = document.getElementById('switchToLogin');
+
+            function openModal(modal) {
+                modal.style.display = 'flex'; // 使用flex以便居中
+            }
+
+            function closeModal(modal) {
+                modal.style.display = 'none';
+            }
+
+            // 更新头部登录/注册/退出按钮的显示状态
+            async function updateHeaderButtons() {
+                const { data: { session } } = await supabase.auth.getSession();
+                if (session) {
+                    // 用户已登录
+                    headerCtaButtons.innerHTML = '<button class="btn btn-primary" id="logoutBtn">退出登录</button>';
+                    document.getElementById('logoutBtn').addEventListener('click', async () => {
+                        const { error } = await supabase.auth.signOut();
+                        if (error) {
+                            alert('退出登录失败: ' + error.message);
+                        } else {
+                            alert('您已退出登录。');
+                            updateHeaderButtons(); // 退出登录后再次更新按钮
+                        }
+                    });
+                } else {
+                    // 用户未登录
+                    headerCtaButtons.innerHTML = `
+                        <button class="btn btn-outline" id="loginBtn">登录</button>
+                        <button class="btn btn-primary" id="registerBtn">注册</button>
+                    `;
+                    // 重新绑定事件监听器，因为 innerHTML 会覆盖之前的监听器
+                    document.getElementById('loginBtn').addEventListener('click', () => openModal(loginModal));
+                    document.getElementById('registerBtn').addEventListener('click', () => openModal(registerModal));
+                }
+            }
+
+            // 页面加载时初始化头部按钮状态
+            updateHeaderButtons(); // 调用异步函数
+
+            // 监听认证状态变化，自动更新按钮
+            supabase.auth.onAuthStateChange((event, session) => {
+                // console.log('Auth event:', event, 'Session:', session);
+                updateHeaderButtons();
+            });
+
+            // CTA and hero buttons
+            if (ctaRegisterBtn) {
+                ctaRegisterBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(registerModal); });
+            }
+
+            closeLoginModal.addEventListener('click', () => closeModal(loginModal));
+            closeRegisterModal.addEventListener('click', () => closeModal(registerModal));
+
+            window.addEventListener('click', (event) => {
+                if (event.target === loginModal) {
+                    closeModal(loginModal);
+                }
+                if (event.target === registerModal) {
+                    closeModal(registerModal);
+                }
+            });
+
+            // Switch between login/register modals
+            switchToRegister.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeModal(loginModal);
+                openModal(registerModal);
+                // Clear any previous registration errors and input values
+                document.getElementById('registerUsername').value = '';
+                document.getElementById('registerPassword').value = '';
+                document.getElementById('registerConfirmPassword').value = '';
+                document.getElementById('registerPassword').classList.remove('shake');
+                document.getElementById('registerConfirmPassword').classList.remove('shake');
+                document.getElementById('registerPassword').style.borderColor = '';
+                document.getElementById('registerConfirmPassword').style.borderColor = '';
+                document.getElementById('passwordMismatchError').style.display = 'none';
+            });
+
+            switchToLogin.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeModal(registerModal);
+                openModal(loginModal);
+                // Clear login input values
+                document.getElementById('loginUsername').value = '';
+                document.getElementById('loginPassword').value = '';
+            });
+
+            // REAL LOGIN FORM SUBMISSION with Supabase
+            const loginUsernameInput = document.getElementById('loginUsername');
+            const loginPasswordInput = document.getElementById('loginPassword');
+
+            document.getElementById('loginForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const username = loginUsernameInput.value.trim();
+                const password = loginPasswordInput.value;
+
+                if (!username || !password) {
+                    alert('请输入用户名和密码！');
+                    return;
+                }
+
+                // Supabase Authentication 推荐使用邮箱或手机号。
+                // 这里为了符合您“只用用户名登录”的要求，构造一个虚拟邮箱。
+                // 真实应用中，通常会要求用户注册时提供真实的邮箱或手机号。
+                const dummyEmail = username + '@example.com'; // 构造一个虚拟邮箱
+
+                const { data, error } = await supabase.auth.signInWithPassword({
+                    email: dummyEmail,
+                    password: password,
+                });
+
+                if (error) {
+                    // 可以在这里根据 error.message 提供更具体的提示
+                    alert('登录失败: ' + error.message);
+                } else if (data.user) {
+                    alert('登录成功！欢迎您，' + username + '！');
+                    closeModal(loginModal);
+                    // Supabase 会自动在 localStorage 存储会话信息，
+                    // updateHeaderButtons 会在 onAuthStateChange 触发时更新 UI
+                } else {
+                    alert('登录失败，请检查用户名或密码。');
+                }
+            });
+
+            // REAL REGISTER FORM SUBMISSION with Supabase
+            const registerUsernameInput = document.getElementById('registerUsername'); // 获取注册用户名输入框
+            const registerPasswordInput = document.getElementById('registerPassword');
+            const registerConfirmPasswordInput = document.getElementById('registerConfirmPassword');
+            const passwordMismatchError = document.getElementById('passwordMismatchError');
+
+            document.getElementById('registerForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const username = registerUsernameInput.value.trim();
+                const password = registerPasswordInput.value;
+                const confirmPassword = registerConfirmPasswordInput.value;
+
+                // 基本输入验证
+                if (!username || !password || !confirmPassword) {
+                    alert('所有字段均为必填项！');
+                    return;
+                }
+
+                // 重置之前的错误状态
+                registerPasswordInput.style.borderColor = '';
+                registerConfirmPasswordInput.style.borderColor = '';
+                passwordMismatchError.style.display = 'none';
+                registerConfirmPasswordInput.classList.remove('shake');
+
+                if (password !== confirmPassword) {
+                    // 密码不一致，显示错误并触发震动
+                    passwordMismatchError.style.display = 'block';
+                    registerPasswordInput.style.borderColor = 'red';
+                    registerConfirmPasswordInput.style.borderColor = 'red';
+                    registerConfirmPasswordInput.classList.add('shake');
+
+                    // 监听动画结束事件，动画结束后移除shake类，以便下次错误能再次触发
+                    // 使用 { once: true } 确保事件监听器只触发一次
+                    registerConfirmPasswordInput.addEventListener('animationend', () => {
+                        registerConfirmPasswordInput.classList.remove('shake');
+                    }, { once: true });
+
+                    return; // 停止执行后续操作
+                }
+
+                // Supabase Authentication 推荐使用邮箱或手机号。
+                // 这里为了符合您“只用用户名注册”的要求，构造一个虚拟邮箱。
+                const dummyEmail = username + '@example.com'; // 构造一个虚拟邮箱
+
+                const { data, error } = await supabase.auth.signUp({
+                    email: dummyEmail,
+                    password: password,
+                    options: {
+                        // 如果您想存储用户名（或昵称），可以在这里添加 user_metadata
+                        data: { display_name: username }
+                    }
+                });
+
+                if (error) {
+                    alert('注册失败: ' + error.message);
+                } else if (data.user) {
+                    alert('恭喜！用户 "' + username + '" 注册成功！请登录。');
+                    closeModal(registerModal);
+                    openModal(loginModal); // 注册成功后自动打开登录框
+                } else {
+                    // 这种情况通常不会发生，除非 Supabase 内部逻辑有问题
+                    alert('注册失败，未知错误。');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
